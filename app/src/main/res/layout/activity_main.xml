@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:theme="@style/Theme.OdiBettingHints"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rotationX="-85"
+        android:theme="@style/Theme.OdiBettingHints">
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:paddingBottom="70dp"
+        android:paddingRight="50dp"
+        android:background="@color/greenColor"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="center"
+        app:popupTheme="@style/Theme.OdiBettingHints.AppBarOverlay"
+        app:titleMarginStart="40dp" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_main"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+    <include
+        layout="@layout/fragment_first"
+        />
+
+    <include
+        layout="@layout/fragment_blank"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:background="@color/white"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="center"
+        tools:visibility="visible">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
